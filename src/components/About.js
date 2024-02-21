@@ -1,23 +1,35 @@
 import "./About.css";
-import GreenSquare from "./greenSquare.png"
+import Face from "../images/Smile.png";
 
+//profile section meant to briefly introduce me
+//currently placeholder
+//Tailwind notes:
+//* need to put grid first before grid-cols-2 actually works
+//* px and py are padding
+//* space-y-5 is space between children
+//* ml-auto seems to be auto margin?
+//* max-w-xs shrinks it, but because its a large image i think
 function About() {
     return (
-        <section className="bg-secondery text-black px-5 py-7" id="about">
-            <div className="container mx-auto grid md:grid-cols-2 items-center justify-center md:justify-between">
-                <div className="about-info">
-                    <p>text 1</p>
-                    <p>text 2 aaaaaaaaaaaaaaaaaaaaaaaaaaaa dageaaaaaaaaaaaaa egaaaaaar egalhse esloeh huwe</p>
+        <section className="bg-sky-800 px-24 py-32">
+            <div className="grid grid-cols-2 text-white">
+                <div className="text-3xl space-y-5">
+                    <p>Hello, my name's Mylan and I'm trying to build a portfolio page.</p>
+                    <p>Currently, I don't have much to show here, just typing some text in to simlulate the amount of text I might have once done.</p>
+                    <p>The plan is to show some projects below, and attempt to show some cool web stuff with this site itself.</p>
                 </div>
-                <div className="relative w-24 h-24">
-                    <img
-                        src={GreenSquare}
-                        alt="green Square thats a circl"
-                        className="rounded-full"
+
+                <div>
+                    <img 
+                        src={Face}
+                        className="ml-auto max-w-xs"
                     />
-                </div>
+                </div>                
             </div>
+
         </section>
+
+
     );
 }
 
